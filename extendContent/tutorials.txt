@@ -1,0 +1,4 @@
+https://wcc723.github.io/jekyll/2014/01/12/jekyll-bootstrap/
+http://blog.sanc.idv.tw/2014/07/github-github-pagemarkdowm.html
+https://stackoverflow.com/questions/36921947/read-a-server-side-file-using-javascript
+https://developer.mozilla.org/zh-TW/docs/Web/API/XMLHttpRequest/Using_XMLHttpRequest
