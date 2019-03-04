@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html ng-app="chatroomApp">
+<head>
+	<meta charset="utf-8">
+	<title>Welcome to chatroom</title>
+	<link href="../resource/fontawesome-5.7.2/css/all.css" rel="stylesheet">
+	<link rel="import" href="../templates/navigationBar.html">
+	<link rel="import" href="../resource/lib.html">
+	<link rel="stylesheet" href="../resource/master.css" crossorigin="anonymous" />
+	<link rel="stylesheet" href="chatroom.css" crossorigin="anonymous" />
+	<!--<script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.7.7/angular.min.js" crossorigin="anonymous"></script>-->
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.7/angular.min.js"></script>
+	<script src="https://code.jquery.com/jquery-3.1.1.min.js" crossorigin="anonymous"></script>
+	<script src="chatroom.js"></script>
+</head>
+<body>
+	<shadow-element></shadow-element>
+	<div id="chatroomDiv" ng-controller="chatroomController">
+		<div>
+			<div class="input-group">
+				<span class="input-group-text" ng-repeat="messageList">
+
+				</span>
+			</div>
+		</div>
+		<div class="input-group mb-3">
+			<div class="input-group-prepend">
+				<span class="input-group-text" id="basic-addon1">@</span>
+			</div>
+			<input type="text" class="form-control" placeholder="Username" aria-label="Username" aria-describedby="basic-addon1">
+		</div>
+	</div>
+	<h3>Hello!</h3>
+
+	<footer-element></footer-element>
+</body>
+</html>
