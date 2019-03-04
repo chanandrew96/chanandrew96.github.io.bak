@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html>
 <head>
 	<meta charset="utf-8">
@@ -11,9 +11,10 @@
 	<shadow-element></shadow-element>
 	<div id="app">
 		{{ message }}
+		<input v-model="message" />
+		<!--Name: {{ myInfo.name }}
+		Title: {{ myInfo.title }}-->
 	</div>
-
-
 	<script src="aboutMe.js"></script>
 </body>
 </html>
