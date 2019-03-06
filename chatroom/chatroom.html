@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html ng-app="chatroomApp">
+<html>
 <head>
 	<meta charset="utf-8">
 	<title>Welcome to chatroom</title>
@@ -9,29 +9,45 @@
 	<link rel="stylesheet" href="../resource/master.css" crossorigin="anonymous" />
 	<link rel="stylesheet" href="chatroom.css" crossorigin="anonymous" />
 	<!--<script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.7.7/angular.min.js" crossorigin="anonymous"></script>-->
-	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.7/angular.min.js"></script>
-	<script src="https://code.jquery.com/jquery-3.1.1.min.js" crossorigin="anonymous"></script>
-	<script src="chatroom.js"></script>
+	<!--<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.7/angular.min.js"></script>
+	<script src="https://code.jquery.com/jquery-3.1.1.min.js" crossorigin="anonymous"></script>-->
+	<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
 </head>
 <body>
-	<shadow-element></shadow-element>
-	<div id="chatroomDiv" ng-controller="chatroomController">
-		<div>
-			<div class="input-group">
-				<span class="input-group-text" ng-repeat="messageList">
+	<div id="chatApp">
+		<shadow-element></shadow-element>
 
-				</span>
+		{{ message }}
+		{{ msgHistory }}
+		<ul id="demo">
+			<li v-repeat="items" class="item-{{$index}}">
+				{{$index}} - {{parentMsg}} {{childMsg}}
+			</li>
+		</ul>
+
+		<div id="chatroomDiv">
+			<div id="messageDiv">
+				<div class="input-group">
+					<div v-repeat="msgHistory">
+						<!--{{ msg.text }}-->
+					</div>
+					<div class="input-group-text">
+						Text2
+					</div>
+				</div>
+			</div>
+			<div class="input-group mb-3">
+				<div class="input-group-prepend">
+					<span class="input-group-text" id="basic-addon1">@</span>
+				</div>
+				<input type="text" class="form-control" placeholder="Username" aria-label="Username" aria-describedby="basic-addon1">
 			</div>
 		</div>
-		<div class="input-group mb-3">
-			<div class="input-group-prepend">
-				<span class="input-group-text" id="basic-addon1">@</span>
-			</div>
-			<input type="text" class="form-control" placeholder="Username" aria-label="Username" aria-describedby="basic-addon1">
-		</div>
+		<h3>Hello!</h3>
+
+		<footer-element></footer-element>
 	</div>
-	<h3>Hello!</h3>
 
-	<footer-element></footer-element>
+	<script src="chatroom.js"></script>
 </body>
 </html>
