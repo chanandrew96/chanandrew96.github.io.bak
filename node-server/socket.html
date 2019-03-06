@@ -1,0 +1,37 @@
+<html>
+<head>
+	<script src="/socket.io/socket.io.js"></script>
+	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+</head>
+<body>
+	<script>
+		var socket = io.connect();
+
+		socket.on('date', function (data) {
+			var date = new Date(data.date);
+			//console.log(date.toUTCString());
+			//console.log(data.date.format("yyyy-MM-dd"));
+			$('#date').text(date.toUTCString());
+		});
+
+		$(document).ready(function () {
+			$('#text').keypress(function (e) {
+				socket.emit('client_data', {
+					'letter': String.fromCharCode(e.charCode)
+				});
+			});
+		});
+
+		$('#btnSave').click(function () {
+			console.log("btnSave Clicked");
+			console.log($('#text').text);
+			socket.emit('save_msg', {
+				'msg': $('#text').text
+			});
+		});
+	</script>
+	<div id="date"></div>
+	<textarea id="text"></textarea>
+	<input id="btnSave" type="button" value="Save" />
+</body>
+</html>
