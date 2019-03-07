@@ -1,0 +1,23 @@
+{
+  "name": "chanandrew96.io",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/chanandrew96/chanandrew96.github.io.git"
+  },
+  "author": "chanandrew96",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/chanandrew96/chanandrew96.github.io/issues"
+  },
+  "homepage": "https://github.com/chanandrew96/chanandrew96.github.io#readme",
+  "dependencies": {
+    "mongodb": "^3.1.13",
+    "socket.io": "2.2.0"
+  }
+}

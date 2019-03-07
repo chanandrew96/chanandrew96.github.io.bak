@@ -2,6 +2,7 @@
 var url = require('url');
 var fs = require('fs');
 var io = require('socket.io'); // 加入 Socket.IO
+var MongoClient = require('mongodb').MongoClient;
 
 var server = http.createServer(function (request, response) {
 	console.log('Connection');
@@ -35,6 +36,30 @@ var server = http.createServer(function (request, response) {
 					response.write(data, "utf8");
 				}
 				response.end();
+			});
+			break;
+		case '/mongoDb.html':
+			const uri = "mongodb+srv://admin:P@ssw0rd123@cluster-i0jr1.mongodb.net/test?retryWrites=true";
+			const client = new MongoClient(uri, { useNewUrlParser: true });
+			client.connect(err => {
+				const collection = client.db("test").collection("devices");
+				// perform actions on the collection object
+				console.log('mongodb running!');
+
+				client.db.collection('Persons', function (err, collection) {
+
+					collection.insert({ id: 1, firstName: 'Steve', lastName: 'Jobs' });
+					collection.insert({ id: 2, firstName: 'Bill', lastName: 'Gates' });
+					collection.insert({ id: 3, firstName: 'James', lastName: 'Bond' });
+
+					client.db.collection('Persons').count(function (err, count) {
+						if (err) throw err;
+
+						console.log('Total Rows: ' + count);
+					});
+				});
+
+				client.close();
 			});
 			break;
 		default:
