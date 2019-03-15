@@ -1,0 +1,28 @@
+.marginBody {
+	margin-left: 2%;
+	margin-right: 2%;
+	margin-bottom: 10px;
+	margin-top: 10px;
+	padding-left: 1%;
+	padding-right: 1%;
+}
+
+.header {
+	background-color: azure;
+	color: darkgrey;
+	margin-right: 50%;
+	font-size: large;
+	box-shadow: 5px 5px darkgrey;
+	border: solid 1px;
+	border-radius: 10px 2px;
+	/*text-shadow: 2px 2px;*/
+}
+
+.subheader {
+	
+}
+
+.detail {
+	border: solid 2px;
+	border-radius: 8px;
+}

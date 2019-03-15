@@ -19,5 +19,8 @@
   "dependencies": {
     "mongodb": "^3.1.13",
     "socket.io": "2.2.0"
+  },
+  "devDependencies": {
+    "@types/jquery": "^3.3.29"
   }
 }
