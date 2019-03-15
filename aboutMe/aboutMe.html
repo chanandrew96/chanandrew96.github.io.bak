@@ -5,16 +5,43 @@
 	<title>About Me</title>
 	<link rel="import" href="../templates/navigationBar.html">
 	<link rel="import" href="../resource/lib.html">
-	<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+	<link rel=stylesheet type="text/css" href="aboutMe.css">
+	<style type="text/css">
+		@import url("aboutMe.css");
+	</style>
+	<!--<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>-->
 </head>
 <body>
 	<shadow-element></shadow-element>
-	<div id="app">
+	<!--<div id="app" class="border border-info rounded m-3">
 		{{ message }}
 		<input v-model="message" />
-		<!--Name: {{ myInfo.name }}
-		Title: {{ myInfo.title }}-->
+	</div>-->
+
+	<div id="basicInfo" class="mask">
+		<div class="header marginBody">
+			Basic Information
+		</div>
+		<div class="detail marginBody">
+			Detail
+		</div>
 	</div>
+
+	<div id="knowledage">
+		<div class="header marginBody">
+			Basic Knowledage
+		</div>
+		<div class="detail marginBody">
+			Knowledage Detail
+		</div>
+	</div>
+
+	<div id="infoCard">
+		This is infoCard
+	</div>
+
+
 	<script src="aboutMe.js"></script>
+	<script src="infoCard.js"></script>
 </body>
 </html>
