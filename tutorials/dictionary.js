@@ -21,3 +21,5 @@ window.onscroll = function (ev) {
 		});
 	}
 };
+
+window.onload = function () { alert("It's loaded!") }
