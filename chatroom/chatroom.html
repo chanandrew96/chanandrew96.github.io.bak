@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html>
 <head>
 	<meta charset="utf-8">
@@ -12,6 +12,7 @@
 	<!--<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.7/angular.min.js"></script>
 	<script src="https://code.jquery.com/jquery-3.1.1.min.js" crossorigin="anonymous"></script>-->
 	<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+	<!--<script data-main="scripts/main" src="../resource/require.js"></script>-->
 </head>
 <body>
 	<div id="chatApp">
@@ -45,9 +46,32 @@
 		</div>
 		<h3>Hello!</h3>
 
+		<div class="container border border-dark rounded">
+			<div class="row">
+				<div class=" col speech-bubble-from
+">
+					Hello World
+				</div>
+			</div>
+			<div class="row">
+				<div class="col speech-bubble-to
+">
+					Goodbyb World
+				</div>
+			</div>
+		</div>
+
+		<div class="input-group newMsgDiv">
+			<input type="text" class="form-control" aria-label="Text input with checkbox" placeholder="Type Here..." v-model="newMessage">
+			<div class="input-group-append">
+				<button class="btn btn-outline-secondary" type="button" v-on:click="addMessage"><i class="fas fa-paper-plane"></i></button>
+			</div>
+		</div>
+
 		<footer-element></footer-element>
 	</div>
 
+	<script>var exports = {};</script>
 	<script src="chatroom.js"></script>
 </body>
 </html>

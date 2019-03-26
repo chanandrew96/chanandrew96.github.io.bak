@@ -2,6 +2,8 @@
 //	console.log(data);
 //});
 
+var requirejs = require('requirejs');
+
 console.log(document.currentScript);
 console.log(document.currentScript.ownerDocument);
 

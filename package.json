@@ -21,6 +21,10 @@
     "socket.io": "2.2.0"
   },
   "devDependencies": {
-    "@types/jquery": "^3.3.29"
+    "@types/jquery": "^3.3.29",
+    "requirejs": "^2.3.6",
+    "vue": "^2.6.10",
+    "webpack": "^4.29.6",
+    "webpack-cli": "^3.3.0"
   }
 }

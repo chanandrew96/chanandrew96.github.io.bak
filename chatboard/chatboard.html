@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Welcome to chatroom</title>
+	<link href="../resource/fontawesome-5.7.2/css/all.css" rel="stylesheet">
+	<link rel="import" href="../templates/navigationBar.html">
+	<link rel="import" href="../resource/lib.html">
+	<link rel="stylesheet" href="../resource/master.css" crossorigin="anonymous" />
+	<link rel="stylesheet" href="chatboard.css" crossorigin="anonymous" />
+	<!--<script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.7.7/angular.min.js" crossorigin="anonymous"></script>-->
+	<!--<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.7/angular.min.js"></script>
+	<script src="https://code.jquery.com/jquery-3.1.1.min.js" crossorigin="anonymous"></script>-->
+	<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+	<!--<script data-main="scripts/main" src="../resource/require.js"></script>-->
+</head>
+<body>
+	<div id="chatApp">
+		<shadow-element></shadow-element>
+
+		<div class="container border border-dark rounded">
+			<div class="row">
+				<div class=" col speech-bubble-from
+">
+					Hello World
+				</div>
+			</div>
+			<div class="row">
+				<div class="col speech-bubble-to
+">
+					Goodbyb World
+				</div>
+			</div>
+			<div class="row">
+				<div class="col speech-bubble-from" v-for="msg in msgList">
+					{{ msg.msgContent }}
+					<br /><small>{{ msg.sendTime }}</small>
+				</div>
+			</div>
+		</div>
+
+		<div class="input-group newMsgDiv">
+			<input type="text" class="form-control" aria-label="Text input with checkbox" placeholder="Type Here..." v-model="newMessage">
+			<div class="input-group-append">
+				<button class="btn btn-outline-secondary" type="button" v-on:click="addMessage"><i class="fas fa-paper-plane"></i></button>
+			</div>
+		</div>
+
+		<footer-element></footer-element>
+	</div>
+
+	<script src="chatboard.js"></script>
+</body>
+</html>

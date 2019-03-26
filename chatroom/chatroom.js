@@ -1,6 +1,9 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
 var vue_1 = require("vue");
+var Component = vue_1.default.extend({
+// type inference enabled
+});
 var chatApp = new vue_1.default({
     el: '#chatApp',
     data: {
@@ -18,6 +21,11 @@ var chatApp = new vue_1.default({
             { childMsg: 'Foo' },
             { childMsg: 'Bar' }
         ]
+    },
+    methods: {
+        addMessage: function (event) {
+            console.log("Add Message Button Click!");
+        }
     }
 });
 //# sourceMappingURL=chatroom.js.map
